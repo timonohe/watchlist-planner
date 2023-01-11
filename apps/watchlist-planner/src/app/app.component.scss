@@ -1,0 +1,12 @@
+mat-toolbar {
+  height: 50px;
+  background-color: darkslateblue;
+
+  mat-icon.mat-icon {
+    cursor: pointer;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
