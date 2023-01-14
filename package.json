@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js",
-    "watchlist-planner:build": "nx run watchlist-planner:build"
+    "watchlist-planner:build": "nx run watchlist-planner:build",
+    "watchlist-planner:start": "nx run watchlist-planner:serve"
   },
   "private": true,
   "dependencies": {
