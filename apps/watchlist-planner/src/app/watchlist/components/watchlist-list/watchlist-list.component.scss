@@ -1,0 +1,16 @@
+#watchlist-add-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  mat-icon.mat-icon {
+    padding-right: 10px;
+  }
+}
+
+#watchlist-list {
+  .watchlist-name, .watchlist-beschreibung, mat-icon.mat-icon {
+    color: white;
+  }
+}

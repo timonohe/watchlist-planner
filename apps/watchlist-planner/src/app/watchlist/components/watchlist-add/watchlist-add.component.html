@@ -1,0 +1,13 @@
+<form [formGroup]="watchlistForm" (ngSubmit)="onWatchlistAdd()">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Meine neue Watchlist" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Beschreibung</mat-label>
+    <textarea matInput formControlName="beschreibung"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Watchlist anlegen</button>
+</form>

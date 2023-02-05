@@ -1,15 +1,18 @@
 <div id="auth-content">
-  <mat-form-field appearance="outline">
-    <mat-label>Benutzername</mat-label>
-    <input matInput>
-  </mat-form-field>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-form-field appearance="outline">
+      <mat-label>Benutzername</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Passwort</mat-label>
+      <input matInput type="password" formControlName="passwort" autocomplete="false">
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Passwort</mat-label>
-    <input matInput type="password">
-  </mat-form-field>
 
-  <div id="buttons">
-    <button mat-raised-button color="primary">Anmelden</button>
-  </div>
+    <div id="buttons">
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Anmelden</button>
+    </div>
+  </form>
 </div>

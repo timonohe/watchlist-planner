@@ -6,6 +6,8 @@
 
 mat-toolbar {
   height: 50px;
+  display: flex;
+  justify-content: space-between;
 
   mat-icon.mat-icon {
     cursor: pointer;
@@ -14,19 +16,14 @@ mat-toolbar {
 
 footer {
   background-color: #3f51b5;
-}
-
-footer {
   height: 30px;
   display: flex;
   align-items: center;
   padding: 0 16px;
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
-
 #app-content {
-  min-height: calc(100vh - 80px);
+  display: flex;
+  flex: 1 1 auto;
+  padding: 20px;
 }

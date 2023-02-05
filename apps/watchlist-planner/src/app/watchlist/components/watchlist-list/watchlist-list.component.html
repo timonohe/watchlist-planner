@@ -1,0 +1,13 @@
+<a [routerLink]="['add']" id="watchlist-add-link">
+  <mat-icon>add</mat-icon> Watchlist erstellen
+</a>
+
+<ng-container *ngIf="watchlisten$ | async as watchlisten">
+  <mat-list id="watchlist-list">
+    <mat-list-item *ngFor="let watchlist of watchlisten" [routerLink]="[watchlist.id]">
+      <mat-icon matListItemIcon>movie</mat-icon>
+      <div class="watchlist-name" matListItemTitle>{{watchlist.name}}</div>
+      <div class="watchlist-beschreibung" matListItemLine>{{watchlist.beschreibung}}</div>
+    </mat-list-item>
+  </mat-list>
+</ng-container>

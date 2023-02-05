@@ -1,0 +1,14 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSearchTrigger()">
+  <mat-form-field>
+    <mat-label>Suche</mat-label>
+    <input matInput formControlName="searchinput">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Suche starten</button>
+</form>
+
+<ng-container *ngIf="searchresults$ | async as searchResult">
+  <div id="result-container">
+    <img *ngFor="let result of searchResult.results" [src]="getMoviePosterPath(result)">
+  </div>
+</ng-container>

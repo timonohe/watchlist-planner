@@ -1,13 +1,10 @@
 <mat-toolbar color="primary">
   <span>Watchlist Planner</span>
-  <span class="spacer"></span>
-  <mat-icon>login</mat-icon>
+  <mat-icon (click)="onLogout()">logout</mat-icon>
 </mat-toolbar>
 
 <div id="app-content">
   <router-outlet></router-outlet>
 </div>
 
-<footer>
-  © Timo Nohe, 2023
-</footer>
+<footer>Timo Nohe</footer>

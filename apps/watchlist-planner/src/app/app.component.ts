@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'watchlist-planner-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'watchlist-planner';
+
+  constructor(
+    private angularAuthService: AngularFireAuth,
+    private router: Router,
+  ) { }
+
+  onLogout(): void {
+    this.angularAuthService.signOut().then(() => this.router.navigate(['/auth']));
+  }
 }
